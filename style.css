@@ -338,7 +338,143 @@ header {
     font-size: 14px;
 }
 
+/* =========================
+   PROJECTS SECTION
+========================= */
 
+.projects-section {
+    max-width: 100%;
+    padding: 90px 30px;
+    background-color: #f7f4ec;
+}
+
+/* Projects Grid - Four Cards in One Row */
+
+.projects-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+/* Individual Project Card */
+
+.project-card {
+    min-width: 0;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border: 1px solid #ddd7ca;
+    border-top: 4px solid #c9a227;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(36, 36, 36, 0.10);
+}
+
+/* Project Number */
+
+.project-number {
+    color: #a17c18;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+/* Project Title */
+
+.project-card h3 {
+    color: #242424;
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+}
+
+/* Project Description */
+
+.project-card p {
+    color: #625e57;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0 0 22px;
+}
+
+/* Technology Tags */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+.project-tags span {
+    background-color: #ebe6da;
+    color: #51452b;
+    padding: 6px 9px;
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+/* Project Links */
+
+.project-link {
+    display: inline-block;
+    color: #8b6b25;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #c9a227;
+    padding-bottom: 4px;
+    margin-top: auto;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #242424;
+}
+
+/* Tablet Layout */
+
+@media (max-width: 1050px) {
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    .projects-section {
+        padding: 60px 20px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .project-card {
+        padding: 25px 22px;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+    }
+}
 /* =========================
    CERTIFICATES
 ========================= */
