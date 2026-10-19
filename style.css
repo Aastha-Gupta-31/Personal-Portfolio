@@ -360,6 +360,13 @@ header {
     align-items: stretch;
 }
 
+/* Keep all four cards within the grid */
+.projects-container .project-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 /* Individual Project Card */
 
 .project-card {
